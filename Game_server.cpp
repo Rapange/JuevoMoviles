@@ -5,8 +5,8 @@
 #include <sstream>
 #define ACT_SIZE 1
 #define ID_SIZE 1
-#define STATUS_SIZE 3
-#define MAX_A_SIZE 5
+#define STATUS_SIZE 18
+#define MAX_A_SIZE 6
 #define COORD_SIZE 4
 #define MAX_SIZE 16
 
@@ -33,7 +33,7 @@ string intToStr(int a)
     return ss.str();
 }
 
-string readProtocolA(SOCKET socket, sockaddr_in &si_other, int slen)
+/*string readProtocolA(SOCKET socket, sockaddr_in &si_other, int slen)
 {
     string protocol_A;
 
@@ -56,7 +56,7 @@ string readProtocolA(SOCKET socket, sockaddr_in &si_other, int slen)
     delete[] buffer;
     buffer = NULL;
     return protocol_A;
-}
+}*/
 
 void writeProtocolS(SOCKET socket, string& characters, sockaddr_in &si_other, int slen) //Envía tipos de jugadores a todos.
 {
