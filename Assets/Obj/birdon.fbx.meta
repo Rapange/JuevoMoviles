@@ -1,0 +1,165 @@
+fileFormatVersion: 2
+guid: c404d537831af2640bc6f66fdfb32ea1
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: Both Eyes
+    100004: Both Eyes.shadow
+    100006: Both Eyes.shadow_end
+    100008: Both Eyes_end
+    100010: Camera
+    100012: Center
+    100014: Hair
+    100016: Hair_end
+    100018: Head
+    100020: Lamp
+    100022: Left Eye
+    100024: Left Eye_end
+    100026: Left Foot
+    100028: Left Foot_end
+    100030: Left Helmet Flap
+    100032: Left Helmet Flap_end
+    100034: Left WIng 1
+    100036: Left Wing 2
+    100038: Left Wing 2_end
+    100040: Right Eye
+    100042: Right Eye_end
+    100044: Right Foot
+    100046: Right Foot_end
+    100048: Right Helmet Flap
+    100050: Right Helmet Flap_end
+    100052: Right Wing 1
+    100054: Right Wing 2
+    100056: Right Wing 2_end
+    100058: Torso
+    100060: "\u30D0\u30FC\u30C9\u30F3"
+    100062: "\u30D0\u30FC\u30C9\u30F3_arm"
+    100064: "\u30D0\u30FC\u30C9\u30F3_mesh"
+    100066: "\u5168\u3066\u306E\u89AA"
+    400000: //RootNode
+    400002: Both Eyes
+    400004: Both Eyes.shadow
+    400006: Both Eyes.shadow_end
+    400008: Both Eyes_end
+    400010: Camera
+    400012: Center
+    400014: Hair
+    400016: Hair_end
+    400018: Head
+    400020: Lamp
+    400022: Left Eye
+    400024: Left Eye_end
+    400026: Left Foot
+    400028: Left Foot_end
+    400030: Left Helmet Flap
+    400032: Left Helmet Flap_end
+    400034: Left WIng 1
+    400036: Left Wing 2
+    400038: Left Wing 2_end
+    400040: Right Eye
+    400042: Right Eye_end
+    400044: Right Foot
+    400046: Right Foot_end
+    400048: Right Helmet Flap
+    400050: Right Helmet Flap_end
+    400052: Right Wing 1
+    400054: Right Wing 2
+    400056: Right Wing 2_end
+    400058: Torso
+    400060: "\u30D0\u30FC\u30C9\u30F3"
+    400062: "\u30D0\u30FC\u30C9\u30F3_arm"
+    400064: "\u30D0\u30FC\u30C9\u30F3_mesh"
+    400066: "\u5168\u3066\u306E\u89AA"
+    2000000: Camera
+    2100000: birdon
+    4300000: "\u30D0\u30FC\u30C9\u30F3_mesh"
+    9500000: //RootNode
+    10800000: Lamp
+    13700000: "\u30D0\u30FC\u30C9\u30F3_mesh"
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: birdon
+    second: {fileID: 2100000, guid: 05302bd5eb1e44d45b36e137958a648f, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
