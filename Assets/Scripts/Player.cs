@@ -8,15 +8,24 @@ public class Player : MonoBehaviour {
 	public Transform fire;
 	public Transform water;
 	public Transform _light;
+	private GameObject me;
+	private Transform imageTarget;
 	
 	void Start () {
 
+		me = GameObject.CreatePrimitive(PrimitiveType.Cube);
+		me.transform.position = new Vector3(0,0,0);
+		
+		me.transform.SetParent(GameObject.Find("ImageTarget").transform);
+		
+		imageTarget = GameObject.Find("ImageTarget").transform;
 		//FindObjectOfType<Camera>().transform.localPosition; //gives the position of current player's device. (ARcamera).
 	}
 	
 	// Update is called once per frame
 	void Update () {
 
+		me.transform.position = new Vector3(FindObjectOfType<Camera>().transform.localPosition.x, FindObjectOfType<Camera>().transform.localPosition.y, - FindObjectOfType<Camera>().transform.localPosition.z);
 		if(Input.touchCount == 1){
 			Touch pTouch = Input.GetTouch(0);
 			if(pTouch.phase == TouchPhase.Began){
@@ -31,7 +40,7 @@ public class Player : MonoBehaviour {
 				else{
 					bullet = Instantiate(water, FindObjectOfType<Camera>().transform.localPosition, Quaternion.identity);
 				}
-				bullet.SetParent(GameObject.Find("ImageTarget").transform);
+				bullet.SetParent(imageTarget);
 			}
 		}
 	}
