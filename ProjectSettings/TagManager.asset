@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - Enemy
+  - Light_attack
+  - Fire_attack
+  - Water_attack
   layers:
   - Default
   - TransparentFX

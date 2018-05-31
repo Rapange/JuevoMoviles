@@ -8,10 +8,12 @@ public class Enemy : MonoBehaviour {
 	private float life;
 	private float t_x, t_z;
 	private GameObject master;
+	private float speed;
 	
 	void Start () {
 		life = 100.0f;
-		t_x = 1 * Time.deltaTime; t_z = 0;
+		speed = 4.0f;
+		t_x = speed * Time.deltaTime; t_z = 0;
 		master = GameObject.Find("Master");
 	}
 	
@@ -24,8 +26,8 @@ public class Enemy : MonoBehaviour {
 		if(transform.position.z > 10) t_z = -1;
 		if(transform.position.z < -10) t_z = 1;*/
 		
-		if(transform.position.x > 5) t_x = -1 * Time.deltaTime;
-		if(transform.position.x < -5) t_x = 1 * Time.deltaTime;
+		if(transform.position.x > 5) t_x = -speed * Time.deltaTime;
+		if(transform.position.x < -5) t_x = speed * Time.deltaTime;
 		transform.Translate(t_x, 0, t_z);
 		
 	}
@@ -33,6 +35,9 @@ public class Enemy : MonoBehaviour {
 	void OnCollisionEnter(Collision collision){
 		if(!collision.gameObject.tag.Equals("Enemy")){
 			life -= 25.0f;
+			//if(true || collision.gameObject.tag.Equals("Water_attack")){
+			   	this.speed = speed / 2;
+			//}
 		}
 		
 		if(life <= 0.0f){
