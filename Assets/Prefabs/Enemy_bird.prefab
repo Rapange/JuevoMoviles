@@ -127,6 +127,8 @@ GameObject:
   - component: {fileID: 95938367333772918}
   - component: {fileID: 135949346454260118}
   - component: {fileID: 114819620909681266}
+  - component: {fileID: 114539467478270896}
+  - component: {fileID: 114912406397924840}
   m_Layer: 0
   m_Name: Enemy_bird
   m_TagString: Enemy
@@ -960,6 +962,38 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &114539467478270896
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1377086834775814}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 372142912, guid: dc443db3e92b4983b9738c1131f555cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SceneId:
+    m_Value: 0
+  m_AssetId:
+    i0: 254
+    i1: 157
+    i2: 252
+    i3: 15
+    i4: 224
+    i5: 137
+    i6: 114
+    i7: 180
+    i8: 154
+    i9: 59
+    i10: 96
+    i11: 158
+    i12: 128
+    i13: 190
+    i14: 134
+    i15: 132
+  m_ServerOnly: 0
+  m_LocalPlayerAuthority: 0
 --- !u!114 &114819620909681266
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -971,6 +1005,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 002033b646c04344490a801efcafbd12, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &114912406397924840
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1377086834775814}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1768714887, guid: dc443db3e92b4983b9738c1131f555cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_TransformSyncMode: 1
+  m_SendInterval: 0.1
+  m_SyncRotationAxis: 7
+  m_RotationSyncCompression: 0
+  m_SyncSpin: 0
+  m_MovementTheshold: 0.001
+  m_VelocityThreshold: 0.0001
+  m_SnapThreshold: 5
+  m_InterpolateRotation: 1
+  m_InterpolateMovement: 1
 --- !u!135 &135949346454260118
 SphereCollider:
   m_ObjectHideFlags: 1

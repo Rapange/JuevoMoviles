@@ -1,8 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Networking;
 
-public class Master : MonoBehaviour {
+public class Master : NetworkBehaviour {
 
 	public Transform birdon;
 	public int enemies;
@@ -23,7 +24,7 @@ public class Master : MonoBehaviour {
 			cont++;
 			for(int i = 0; i < enemies; i++){
 				Transform enemy = Instantiate(birdon,new Vector3(0,0,-i*2), Quaternion.identity, imageTarget);
-				
+				NetworkServer.Spawn(enemy.gameObject);
 			}
 			
 		}

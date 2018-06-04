@@ -24,6 +24,8 @@ GameObject:
   - component: {fileID: 65079702458280596}
   - component: {fileID: 54628091792636346}
   - component: {fileID: 114061029147093966}
+  - component: {fileID: 114720815665941056}
+  - component: {fileID: 114165657752725590}
   m_Layer: 0
   m_Name: Fire
   m_TagString: Fire_attack
@@ -124,3 +126,56 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 94244a6b6ea443349a5ee42ab7b3fdff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &114165657752725590
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1321864076328052}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1768714887, guid: dc443db3e92b4983b9738c1131f555cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_TransformSyncMode: 3
+  m_SendInterval: 0
+  m_SyncRotationAxis: 7
+  m_RotationSyncCompression: 0
+  m_SyncSpin: 0
+  m_MovementTheshold: 0.001
+  m_VelocityThreshold: 0.0001
+  m_SnapThreshold: 5
+  m_InterpolateRotation: 1
+  m_InterpolateMovement: 1
+--- !u!114 &114720815665941056
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1321864076328052}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 372142912, guid: dc443db3e92b4983b9738c1131f555cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SceneId:
+    m_Value: 0
+  m_AssetId:
+    i0: 96
+    i1: 170
+    i2: 97
+    i3: 156
+    i4: 123
+    i5: 242
+    i6: 255
+    i7: 4
+    i8: 184
+    i9: 201
+    i10: 133
+    i11: 141
+    i12: 215
+    i13: 201
+    i14: 101
+    i15: 150
+  m_ServerOnly: 0
+  m_LocalPlayerAuthority: 0

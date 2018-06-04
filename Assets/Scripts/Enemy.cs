@@ -1,8 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Networking;
 
-public class Enemy : MonoBehaviour {
+public class Enemy : NetworkBehaviour {
 
 	// Use this for initialization
 	private float life;
@@ -34,6 +35,7 @@ public class Enemy : MonoBehaviour {
 			//if(true || collision.gameObject.tag.Equals("Water_attack")){
 			   	t_x = t_x / 2;
 			//}
+			Destroy(collision.gameObject);
 		}
 		
 		if(life <= 0.0f){

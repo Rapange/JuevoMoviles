@@ -24,6 +24,8 @@ GameObject:
   - component: {fileID: 135430211364576496}
   - component: {fileID: 54563663100768476}
   - component: {fileID: 114496511275425572}
+  - component: {fileID: 114246165188821812}
+  - component: {fileID: 114674398190388932}
   m_Layer: 0
   m_Name: Water
   m_TagString: Water_attack
@@ -101,6 +103,38 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &114246165188821812
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1087423952155938}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 372142912, guid: dc443db3e92b4983b9738c1131f555cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SceneId:
+    m_Value: 0
+  m_AssetId:
+    i0: 124
+    i1: 225
+    i2: 71
+    i3: 220
+    i4: 180
+    i5: 68
+    i6: 159
+    i7: 52
+    i8: 233
+    i9: 103
+    i10: 244
+    i11: 104
+    i12: 19
+    i13: 199
+    i14: 218
+    i15: 198
+  m_ServerOnly: 0
+  m_LocalPlayerAuthority: 0
 --- !u!114 &114496511275425572
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -112,6 +146,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6cef6c83fee5fba4caf8ee87e29fa3a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &114674398190388932
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1087423952155938}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1768714887, guid: dc443db3e92b4983b9738c1131f555cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_TransformSyncMode: 3
+  m_SendInterval: 0
+  m_SyncRotationAxis: 7
+  m_RotationSyncCompression: 0
+  m_SyncSpin: 0
+  m_MovementTheshold: 0.001
+  m_VelocityThreshold: 0.0001
+  m_SnapThreshold: 5
+  m_InterpolateRotation: 1
+  m_InterpolateMovement: 1
 --- !u!135 &135430211364576496
 SphereCollider:
   m_ObjectHideFlags: 1
