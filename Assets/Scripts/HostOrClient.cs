@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Networking;
 
+
 public class HostOrClient : MonoBehaviour {
 
 	private NetworkManager manager;
@@ -10,9 +11,15 @@ public class HostOrClient : MonoBehaviour {
 	void Start () {
 		manager = GetComponent<NetworkManager>();
 		if(OnlineInit.option == 1){
+			manager.serverBindToIP = true;
+			manager.serverBindAddress = Network.player.ipAddress;
 			manager.StartHost();
 		}
-		else manager.StartClient();
+		else
+		{
+			manager.networkAddress = OnlineInit.ip;
+			manager.StartClient();
+		}
 		
 	}
 	

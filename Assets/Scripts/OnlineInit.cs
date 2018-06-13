@@ -2,10 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine.SceneManagement;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class OnlineInit : MonoBehaviour {
 
 	static public int option;
+	static public string ip;
+	public Text input_field;
 	// Use this for initialization
 	void Start () {
 
@@ -22,6 +25,8 @@ public class OnlineInit : MonoBehaviour {
 				}
 				else{
 					option = 2;
+					ip = input_field.text;
+
 				}
 				SceneManager.LoadScene(1);
 			}

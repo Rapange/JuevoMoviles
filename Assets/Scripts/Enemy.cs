@@ -32,9 +32,14 @@ public class Enemy : NetworkBehaviour {
 	void OnCollisionEnter(Collision collision){
 		if(!collision.gameObject.tag.Equals("Enemy")){
 			life -= 25.0f;
-			//if(true || collision.gameObject.tag.Equals("Water_attack")){
+			if(collision.gameObject.tag.Equals("Water_attack")){
 			   	t_x = t_x / 2;
-			//}
+				transform.GetChild(1).GetComponent<Renderer>().material.SetColor("_Color", new Color32(30,144,255,25));
+			}
+			
+			transform.GetChild(2).GetComponent<ParticleSystem>().Play();
+			ParticleSystem.EmissionModule em = transform.GetChild(2).GetComponent<ParticleSystem>().emission;
+			em.enabled = true;
 			Destroy(collision.gameObject);
 		}
 		
