@@ -17,7 +17,7 @@ public class HostOrClient : MonoBehaviour {
 		}
 		else
 		{
-			manager.networkAddress = OnlineInit.ip;
+			//manager.networkAddress =  "192.168.1.100";//OnlineInit.ip;
 			manager.StartClient();
 		}
 		

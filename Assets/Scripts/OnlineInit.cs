@@ -25,7 +25,7 @@ public class OnlineInit : MonoBehaviour {
 				}
 				else{
 					option = 2;
-					ip = input_field.text;
+					//ip = input_field.text;
 
 				}
 				SceneManager.LoadScene(1);
