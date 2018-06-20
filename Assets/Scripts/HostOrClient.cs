@@ -11,13 +11,13 @@ public class HostOrClient : MonoBehaviour {
 	void Start () {
 		manager = GetComponent<NetworkManager>();
 		if(OnlineInit.option == 1){
-			manager.serverBindToIP = true;
-			manager.serverBindAddress = Network.player.ipAddress;
+			/*manager.serverBindToIP = true;
+			manager.serverBindAddress = Network.player.ipAddress;*/
 			manager.StartHost();
 		}
 		else
 		{
-			//manager.networkAddress =  "192.168.1.100";//OnlineInit.ip;
+			//manager.networkAddress =  OnlineInit.ip;
 			manager.StartClient();
 		}
 		

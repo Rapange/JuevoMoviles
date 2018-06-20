@@ -11,8 +11,8 @@ public class Master : NetworkBehaviour {
 	private int cont;
 	// Use this for initialization
 	void Start () {
-		enemies = 1;
-		cont = 2;
+		enemies = 0;
+		cont = 1;
 		imageTarget = GameObject.Find("ImageTarget").transform;
 		
 	}
@@ -23,10 +23,28 @@ public class Master : NetworkBehaviour {
 			enemies = cont;
 			cont++;
 			for(int i = 0; i < enemies; i++){
-				Transform enemy = Instantiate(birdon,new Vector3(0,0,-i*2), Quaternion.identity, imageTarget);
+				Transform enemy = Instantiate(birdon,new Vector3(0,0,-i*2), Quaternion.identity);
+				enemy.SetParent(imageTarget);
 				NetworkServer.Spawn(enemy.gameObject);
 			}
 			
 		}
+		
+		/*GameObject[] players = GameObject.FindGameObjectsWithTag("Player");
+		for(int i = 0; i < players.Length; i++){
+			for(int j = i+1; j < players.Length; j++){
+				if(players[i].GetComponent<Player>().id == 0 && players[j].GetComponent<Player>().id != players[i].GetComponent<Player>().id){
+					//if(Mathf.Abs(players[i].transform.position.x - players[j].transform.position.x) <= 10 && Mathf.Abs(players[i].transform.position.y - players[j].transform.position.y) <= 10){
+						players[i].GetComponent<Player>().id = 3;
+					//}
+				}
+			}
+			
+		}*/
+	}
+	
+	public void kill(GameObject enem){
+		Destroy(enem);
+		enemies--;
 	}
 }
