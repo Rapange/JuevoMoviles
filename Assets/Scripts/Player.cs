@@ -33,7 +33,7 @@ public class Player : NetworkBehaviour {
 		
 		
 		
-		transform.position = new Vector3(FindObjectOfType<Camera>().transform.localPosition.x, FindObjectOfType<Camera>().transform.localPosition.y, - FindObjectOfType<Camera>().transform.localPosition.z);
+		transform.position = new Vector3(FindObjectOfType<Camera>().transform.position.x, FindObjectOfType<Camera>().transform.position.y, FindObjectOfType<Camera>().transform.position.z);
 		
 		//ClientScene.FindLocalObject(1);
 		/*GameObject[] players = GameObject.FindGameObjectsWithTag("Player");
@@ -51,15 +51,15 @@ public class Player : NetworkBehaviour {
 				//Transform bullet;
 				if(pTouch.position.y < Screen.height / 3 && id == 0){
 					//bullet = Instantiate(fire, FindObjectOfType<Camera>().transform.localPosition, Quaternion.identity);
-					CmdFire(1, FindObjectOfType<Camera>().transform.localPosition);
+					CmdFire(1, transform.position);
 				}
 				else if(pTouch.position.y >= Screen.height / 3 && pTouch.position.y < 2 * Screen.height / 3 && id == 1){
 					//bullet = Instantiate(_light, FindObjectOfType<Camera>().transform.localPosition, Quaternion.identity);
-					CmdFire(2, FindObjectOfType<Camera>().transform.localPosition);
+					CmdFire(2, transform.position);
 				}
 				else if(pTouch.position.y >= 2 * Screen.height / 3 && id == 2){
 					//bullet = Instantiate(water, FindObjectOfType<Camera>().transform.localPosition, Quaternion.identity);
-					CmdFire(3, FindObjectOfType<Camera>().transform.localPosition );
+					CmdFire(3, transform.position );
 				}
 
 				/* bullet.SetParent(imageTarget);
