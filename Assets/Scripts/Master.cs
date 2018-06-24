@@ -24,7 +24,9 @@ public class Master : NetworkBehaviour {
 			cont++;
 			for(int i = 0; i < enemies; i++){
 				Transform enemy = Instantiate(birdon,new Vector3(0,0,-i*2), Quaternion.identity);
-				enemy.SetParent(imageTarget);
+				
+				//enemy.SetParent(imageTarget);
+				//ClientScene.RegisterPrefab(enemy.gameObject);
 				NetworkServer.Spawn(enemy.gameObject);
 			}
 			

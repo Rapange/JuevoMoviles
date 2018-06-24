@@ -24,7 +24,7 @@ public class Enemy : NetworkBehaviour {
 	private float now;
 	private float isNegative;
 	
-	[SyncVar]
+	[SyncVar]//dfs
 	public bool isFrozen;
 	[SyncVar]
 	public bool isBurning;
@@ -45,10 +45,13 @@ public class Enemy : NetworkBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		now = Time.timeSinceLevelLoad;
 		
+		
+		now = Time.timeSinceLevelLoad;
+		Debug.Log(isFrozen);
 
 		if(isFrozen){
+			Debug.Log("enem frozen");
 			speed = 2.0f;
 			transform.GetChild(1).GetComponent<Renderer>().material.SetColor("_Color", new Color32(30,144,255,255));
 		}
@@ -95,23 +98,49 @@ public class Enemy : NetworkBehaviour {
 		
 	}
 	
+
+	
+	[Command]
+	void CmdSound(int sound){
+		Debug.Log("server sound");
+		isFrozen = true;
+		AudioSource[] list = GetComponents<AudioSource>();
+		list[sound].Play();
+		
+		RpcSound(sound);
+	}
+	
+	[ClientRpc]
+	public void RpcSound(int sound){
+		AudioSource[] list = GetComponents<AudioSource>();
+		list[sound].Play();
+		Debug.Log("sound");
+	}
+	
 	
 	void OnCollisionEnter(Collision collision){
 		if(!collision.gameObject.tag.Equals("Enemy")){
-			//life -= 25.0f;
+			
 			if(collision.gameObject.tag.Equals("Water_attack")){
 				isFrozen = true;
 				waterStart = Time.timeSinceLevelLoad;
+				/*GameObject.FindGameObjectWithTag("Player").GetComponent<Player>().CmdSound(1);
+				
+				CmdSound(1);*/
 			}
 			else if(collision.gameObject.tag.Equals("Fire_attack")){
 			
 				isBurning = true;
 				fireStart = Time.timeSinceLevelLoad;
+				/*GameObject.FindGameObjectWithTag("Player").GetComponent<Player>().CmdSound(0);
+				CmdSound(0);*/
 			}
 			else{
 				lightStart = Time.timeSinceLevelLoad;
 				speed = 0.0f;
 				life -= 10.0f;
+				/*GameObject.FindGameObjectWithTag("Player").GetComponent<Player>().CmdSound(2);
+				CmdSound(2);*/
 			}
 			Destroy(collision.gameObject);
 		}

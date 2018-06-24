@@ -13,15 +13,23 @@ public class HostOrClient : MonoBehaviour {
 		if(OnlineInit.option == 1){
 			/*manager.serverBindToIP = true;
 			manager.serverBindAddress = Network.player.ipAddress;*/
+			manager.networkAddress =  Network.player.ipAddress;
 			manager.StartHost();
+			//manager.StartServer();
+
 		}
 		else
 		{
-			//manager.networkAddress =  OnlineInit.ip;
+			
+			manager.networkAddress =  OnlineInit.ip;
+			Debug.Log(OnlineInit.ip);
 			manager.StartClient();
 		}
 		
 	}
+	
+	
+	
 	
 	// Update is called once per frame
 	void Update () {

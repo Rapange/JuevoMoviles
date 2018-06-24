@@ -6,9 +6,11 @@ public class Fire : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		//Eje y es el eje z en el celular.
-		GetComponent<Rigidbody>().velocity = new Vector3(5*Input.acceleration.y,0.0f, 0.0f);
+		//Eje y es el eje z en el celular. Eje x del Vector3 es el disparo de izquierda y derecha.
+		//Eje x es el eje y en el celular.
 		
+		//GetComponent<Rigidbody>().velocity = new Vector3(-5 * Input.acceleration.x * Input.acceleration.y,0.0f, -20 * Input.acceleration.x * Input.acceleration.y);
+		//GetComponent<Rigidbody>().velocity = FindObjectOfType<Camera>().transform.forward * 5;
 	}
 	
 	// Update is called once per frame
@@ -17,5 +19,9 @@ public class Fire : MonoBehaviour {
 			Destroy(gameObject);
 		}
 		
+	}
+	
+	float mod(float x, float y, float z){
+		return Mathf.Sqrt(x*x + y*y + z*z);
 	}
 }
