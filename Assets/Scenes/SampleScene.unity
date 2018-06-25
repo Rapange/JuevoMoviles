@@ -178,6 +178,33 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+--- !u!21 &296395522
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: 'MoloMaterial
+
+    12118'
+  m_Shader: {fileID: 10752, guid: 0000000000000000f000000000000000, type: 0}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 5
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _MainTex:
+        m_Texture: {fileID: 2800000, guid: 23ff5bda31cc47e0a50e1d47e738e3fe, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats: []
+    m_Colors:
+    - _Color: {r: 0.82089555, g: 0.82089555, b: 0.82089555, a: 1}
 --- !u!1 &431443180
 GameObject:
   m_ObjectHideFlags: 0
@@ -219,7 +246,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f7d404666b3751446b2c023563efaa83, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  birdon: {fileID: 4957960032675118, guid: fe9dfc0fe08972b49a3b609e80be8684, type: 2}
+  birdon: {fileID: 4952378712147422, guid: 3c84339c9df91f74e8c541a1a68471af, type: 2}
   enemies: 0
 --- !u!114 &431443183
 MonoBehaviour:
@@ -368,12 +395,12 @@ MonoBehaviour:
   water: {fileID: 4068208983584654, guid: 7ce147dcb4449f34e967f46813c7dac6, type: 2}
   _light: {fileID: 4377080956496544, guid: 70ed58dca925404429fc5ed146ea30bb, type: 2}
   id: 0
---- !u!43 &739592648
+--- !u!43 &1154252857
 Mesh:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: ImageTargetMesh46068
+  m_Name: ImageTargetMesh12108
   serializedVersion: 8
   m_SubMeshes:
   - serializedVersion: 2
@@ -657,7 +684,7 @@ MonoBehaviour:
   m_OnlineScene: 
   m_SpawnPrefabs:
   - {fileID: 1321864076328052, guid: 60aa619c7bf2ff04b8c9858dd7c96596, type: 2}
-  - {fileID: 1377086834775814, guid: fe9dfc0fe08972b49a3b609e80be8684, type: 2}
+  - {fileID: 1702752980770252, guid: 3c84339c9df91f74e8c541a1a68471af, type: 2}
   - {fileID: 1344369958158336, guid: 70ed58dca925404429fc5ed146ea30bb, type: 2}
   - {fileID: 1087423952155938, guid: 7ce147dcb4449f34e967f46813c7dac6, type: 2}
   m_CustomConfig: 0
@@ -728,33 +755,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!21 &1553836719
-Material:
-  serializedVersion: 6
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_Name: 'MoloMaterial
-
-    46078'
-  m_Shader: {fileID: 10752, guid: 0000000000000000f000000000000000, type: 0}
-  m_ShaderKeywords: 
-  m_LightmapFlags: 5
-  m_EnableInstancingVariants: 0
-  m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
-  stringTagMap: {}
-  disabledShaderPasses: []
-  m_SavedProperties:
-    serializedVersion: 3
-    m_TexEnvs:
-    - _MainTex:
-        m_Texture: {fileID: 2800000, guid: 23ff5bda31cc47e0a50e1d47e738e3fe, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    m_Floats: []
-    m_Colors:
-    - _Color: {r: 0.82089555, g: 0.82089555, b: 0.82089555, a: 1}
 --- !u!1 &1612386988
 GameObject:
   m_ObjectHideFlags: 0
@@ -781,7 +781,7 @@ MeshFilter:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1612386988}
-  m_Mesh: {fileID: 739592648}
+  m_Mesh: {fileID: 1154252857}
 --- !u!23 &1612386990
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -797,7 +797,7 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 1553836719}
+  - {fileID: 296395522}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

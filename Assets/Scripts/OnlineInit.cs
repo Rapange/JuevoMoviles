@@ -34,7 +34,10 @@ public class OnlineInit : MonoBehaviour {
 					Debug.Log(ip);
 
 				}
-				if(option != 0) SceneManager.LoadScene(1);
+				if(option != 0){ 
+					Input.compass.enabled = false;
+					SceneManager.LoadScene(1);
+				}
 			}
 		}
 		

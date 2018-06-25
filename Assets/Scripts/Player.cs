@@ -59,6 +59,8 @@ public class Player : NetworkBehaviour {
 					else if(player.GetComponent<Player>().id == 5){
 						waterAmmo = 3;
 					}
+					if(!GetComponent<AudioSource>().isPlaying)
+						GetComponent<AudioSource>().Play();
 				}
 			}
 		}

@@ -32,6 +32,9 @@ public class Enemy : NetworkBehaviour {
 	ParticleSystem.EmissionModule em;
 		
 	void Start () {
+		GetComponent<Animator>().Play(0);
+		transform.Rotate(Vector3.up, 90);
+		
 		life = 100.0f;
 		speed = 4.0f;
 		master = GameObject.Find("Master");
@@ -84,13 +87,20 @@ public class Enemy : NetworkBehaviour {
 			waterStart = 9999999;
 		}
 		if(now - lightStart >= 0.5f){
+			GetComponent<Animator>().enabled = true;
 			speed = 4.0f;
 			lightStart = 9999999;
 		}
 
-	
-		if(transform.position.x > 5 || transform.position.x < -5) isNegative = -isNegative;
-		transform.Translate(isNegative*speed * Time.deltaTime,0,0);
+		transform.Rotate(Vector3.up, Random.Range(-270f,270f) * Time.deltaTime);
+		if(transform.position.x  > 5 || transform.position.x < -5 || transform.position.z > 5 || transform.position.z < -5) {
+			//isNegative = -isNegative; 
+			transform.Rotate(Vector3.up, -180);
+			//Debug.Log("entra");
+		}
+		transform.Translate(0,0,speed * Time.deltaTime);
+		//Debug.Log(transform.position);
+		
 		
 		/*if(transform.position.z > 5) transform.Translate(0, 0, -speed * Time.deltaTime); 
 		if(transform.position.z < -5) transform.Translate(0, 0, speed * Time.deltaTime);*/
@@ -137,6 +147,7 @@ public class Enemy : NetworkBehaviour {
 				RpcSound(0);
 			}
 			else{
+				GetComponent<Animator>().enabled = false;
 				lightStart = Time.timeSinceLevelLoad;
 				speed = 0.0f;
 				life -= 10.0f;
