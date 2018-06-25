@@ -124,9 +124,9 @@ public class Enemy : NetworkBehaviour {
 			if(collision.gameObject.tag.Equals("Water_attack")){
 				isFrozen = true;
 				waterStart = Time.timeSinceLevelLoad;
-				/*GameObject.FindGameObjectWithTag("Player").GetComponent<Player>().CmdSound(1);
+				/*GameObject.FindGameObjectWithTag("Player").GetComponent<Player>().CmdSound(1);*/
 				
-				CmdSound(1);*/
+				RpcSound(1);
 			}
 			else if(collision.gameObject.tag.Equals("Fire_attack")){
 			
@@ -134,6 +134,7 @@ public class Enemy : NetworkBehaviour {
 				fireStart = Time.timeSinceLevelLoad;
 				/*GameObject.FindGameObjectWithTag("Player").GetComponent<Player>().CmdSound(0);
 				CmdSound(0);*/
+				RpcSound(0);
 			}
 			else{
 				lightStart = Time.timeSinceLevelLoad;
@@ -141,6 +142,8 @@ public class Enemy : NetworkBehaviour {
 				life -= 10.0f;
 				/*GameObject.FindGameObjectWithTag("Player").GetComponent<Player>().CmdSound(2);
 				CmdSound(2);*/
+				
+				RpcSound(2);
 			}
 			Destroy(collision.gameObject);
 		}
