@@ -51,10 +51,10 @@ public class Enemy : NetworkBehaviour {
 		
 		
 		now = Time.timeSinceLevelLoad;
-		Debug.Log(isFrozen);
+		//Debug.Log(isFrozen);
 
 		if(isFrozen){
-			Debug.Log("enem frozen");
+			//Debug.Log("enem frozen");
 			speed = 2.0f;
 			transform.GetChild(1).GetComponent<Renderer>().material.SetColor("_Color", new Color32(30,144,255,255));
 		}
@@ -166,7 +166,7 @@ public class Enemy : NetworkBehaviour {
 		if(life <= 0.0f){
 			//Destroy(gameObject);
 			//master.GetComponent<Master>().enemies--;
-			RpcSound(3);
+			//RpcSound(3);
 			master.GetComponent<Master>().kill(gameObject);
 			
 		}

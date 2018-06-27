@@ -12,6 +12,7 @@ public class Player : NetworkBehaviour {
 	private Transform imageTarget;
 	public uint id;
 	private int fireAmmo, waterAmmo, lightAmmo;
+	public Transform A1,A2,A3;
 	
 	void Start () {
 
@@ -22,6 +23,12 @@ public class Player : NetworkBehaviour {
 
 		//NetworkConnection nc = GetComponent<NetworkConnection>();
 		id = netId.Value;
+		
+		if(isLocalPlayer){
+			if(id == 3) Instantiate(A1);
+			else if(id == 4) Instantiate(A2);
+			else if(id == 5) Instantiate (A3);
+		}
 		fireAmmo = waterAmmo = lightAmmo = 3;
 		//FindObjectOfType<Camera>().transform.localPosition; //gives the position of current player's device. (ARcamera).
 	}

@@ -247,6 +247,9 @@ MonoBehaviour:
   water: {fileID: 4068208983584654, guid: 7ce147dcb4449f34e967f46813c7dac6, type: 2}
   _light: {fileID: 4377080956496544, guid: 70ed58dca925404429fc5ed146ea30bb, type: 2}
   id: 0
+  A1: {fileID: 4873952715992646, guid: 5f8b1094963c7984f833173170dac775, type: 2}
+  A2: {fileID: 4901393530084968, guid: c358830143be27849a9b53c3ab0f5240, type: 2}
+  A3: {fileID: 4558073177406056, guid: 09046735f7c8ec2479cc10acc36a4ccd, type: 2}
 --- !u!114 &114598434637929616
 MonoBehaviour:
   m_ObjectHideFlags: 1
