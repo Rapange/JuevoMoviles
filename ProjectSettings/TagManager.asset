@@ -8,6 +8,7 @@ TagManager:
   - Light_attack
   - Fire_attack
   - Water_attack
+  - Wall
   layers:
   - Default
   - TransparentFX

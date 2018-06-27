@@ -23,7 +23,7 @@ public class Master : NetworkBehaviour {
 			enemies = cont;
 			cont++;
 			for(int i = 0; i < enemies; i++){
-				Transform enemy = Instantiate(birdon,new Vector3(Random.Range(-4f,4f),0,Random.Range(-4f,4f)), Quaternion.identity);
+				Transform enemy = Instantiate(birdon,new Vector3(0,0,0), Quaternion.identity);
 				
 				//enemy.SetParent(imageTarget);
 				//ClientScene.RegisterPrefab(enemy.gameObject);

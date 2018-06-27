@@ -12,16 +12,16 @@ public class OnlineInit : MonoBehaviour {
 	public Text x_val, y_val, z_val, c_val;
 	// Use this for initialization
 	void Start () {
-		Input.compass.enabled = true;
+		//Input.compass.enabled = true;
 		option = 0;
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		x_val.text = Input.acceleration.x.ToString();
+		/*x_val.text = Input.acceleration.x.ToString();
 		y_val.text = Input.acceleration.y.ToString();
 		z_val.text = Input.acceleration.z.ToString();
-		c_val.text = Input.compass.magneticHeading.ToString();
+		c_val.text = Input.compass.magneticHeading.ToString();*/
 		if(Input.touchCount == 1){
 			Touch pTouch = Input.GetTouch(0);
 			if(pTouch.phase == TouchPhase.Began){
@@ -35,7 +35,7 @@ public class OnlineInit : MonoBehaviour {
 
 				}
 				if(option != 0){ 
-					Input.compass.enabled = false;
+					//Input.compass.enabled = false;
 					SceneManager.LoadScene(1);
 				}
 			}

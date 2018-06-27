@@ -129,7 +129,11 @@ public class Enemy : NetworkBehaviour {
 	
 	
 	void OnCollisionEnter(Collision collision){
-		if(!collision.gameObject.tag.Equals("Enemy")){
+		if(collision.gameObject.tag.Equals("Wall")){
+			transform.Rotate(Vector3.up,-180.0f);
+		}
+		
+		if(!collision.gameObject.tag.Equals("Enemy") && !collision.gameObject.tag.Equals("Wall")){
 			
 			if(collision.gameObject.tag.Equals("Water_attack")){
 				isFrozen = true;
@@ -162,7 +166,11 @@ public class Enemy : NetworkBehaviour {
 		if(life <= 0.0f){
 			//Destroy(gameObject);
 			//master.GetComponent<Master>().enemies--;
+			RpcSound(3);
 			master.GetComponent<Master>().kill(gameObject);
+			
 		}
+		
+		
 	}
 }
